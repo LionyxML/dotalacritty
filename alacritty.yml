@@ -68,7 +68,7 @@ window:
   #
   # Window opacity as a floating point number from `0.0` to `1.0`.
   # The value `0.0` is completely transparent and `1.0` is opaque.
-  opacity: 0.7
+  opacity: 0.9
 
   # Startup Mode (changes require restart)
   #
@@ -802,8 +802,7 @@ key_bindings:
   #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp   }
   #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
-  #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
-
+#####  #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
   #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
@@ -883,9 +882,21 @@ key_bindings:
 
   # (Windows only)
   #- { key: Return,   mods: Alt,           action: ToggleFullscreen }
-
+  
   # (macOS only)
-  #- { key: K,              mods: Command, mode: ~Vi|~Search, chars: "\x0c"                 }
+  - { key: X,              mods: Command,                    chars: "\x1bx"                 }
+  - { key: 9,              mods: Command,                    chars: "\x1b9"                 }
+  - { key: 0,              mods: Command,                    chars: "\x1b0"                 }
+  - { key: O,              mods: Command,                    chars: "\x1bo"                 }
+  - { key: P,              mods: Command,                    chars: "\x1bp"                 }
+  - { key: S,              mods: Command,                    chars: "\x1bs"                 }
+  - { key: Z,              mods: Command,                    chars: "\x1bz"                 }
+  - { key: W,              mods: Command,                    chars: "\x1bw"                 }
+  - { key: V,              mods: Command,                    chars: "\x1bv"                 }
+  - { key: I,              mods: Command,                    chars: "\x1bi"                 }
+  - { key: G,              mods: Command|Shift,              chars: "\x1bG"                 }
+  - { key: Slash,          mods: Command,                    chars: "\x1b/"                 }
+  - { key: F,              mods: Command,                    chars: "\x1bf"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
   #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
   - { key: Equals,         mods: Command,                    action: IncreaseFontSize      }
@@ -893,8 +904,8 @@ key_bindings:
   #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
   #- { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
   #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
-  - { key: V,              mods: Command,                    action: Paste                 }
-  - { key: C,              mods: Command,                    action: Copy                  }
+  - { key: V,              mods: Command|Shift,                    action: Paste                 }
+  - { key: C,              mods: Command|Shift,                    action: Copy                  }
   #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
   #- { key: H,              mods: Command,                    action: Hide                  }
   #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }

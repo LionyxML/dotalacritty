@@ -897,6 +897,7 @@ key_bindings:
   - { key: G,              mods: Command|Shift,              chars: "\x1bG"                 }
   - { key: Slash,          mods: Command,                    chars: "\x1b/"                 }
   - { key: F,              mods: Command,                    chars: "\x1bf"                 }
+  - { key: Q,              mods: Command,                    chars: "\x1bq"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
   #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
   - { key: Equals,         mods: Command,                    action: IncreaseFontSize      }

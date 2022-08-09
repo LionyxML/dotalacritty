@@ -802,7 +802,7 @@ key_bindings:
   #- { key: PageUp,    mods: Shift,   mode: ~Alt,        action: ScrollPageUp   }
   #- { key: PageDown,  mods: Shift,   mode: ~Alt,        action: ScrollPageDown }
   #- { key: Home,      mods: Shift,   mode: ~Alt,        action: ScrollToTop    }
-#####  #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
+  #- { key: End,       mods: Shift,   mode: ~Alt,        action: ScrollToBottom }
   # Vi Mode
   #- { key: Space,  mods: Shift|Control, mode: ~Search,    action: ToggleViMode            }
   #- { key: Space,  mods: Shift|Control, mode: Vi|~Search, action: ScrollToBottom          }
@@ -885,6 +885,9 @@ key_bindings:
   
   # (macOS only)
   - { key: X,              mods: Command,                    chars: "\x1bx"                 }
+  - { key: Space,          mods: Control,                    chars: "\x00"                  }                  
+  - { key: 7,              mods: Command,                    chars: "\x1b7"                 }
+  - { key: 8,              mods: Command,                    chars: "\x1b8"                 }  
   - { key: 9,              mods: Command,                    chars: "\x1b9"                 }
   - { key: 0,              mods: Command,                    chars: "\x1b0"                 }
   - { key: O,              mods: Command,                    chars: "\x1bo"                 }
@@ -900,13 +903,13 @@ key_bindings:
   - { key: Q,              mods: Command,                    chars: "\x1bq"                 }
   #- { key: K,              mods: Command, mode: ~Vi|~Search, action: ClearHistory          }
   #- { key: Key0,           mods: Command,                    action: ResetFontSize         }
-  - { key: Equals,         mods: Command,                    action: IncreaseFontSize      }
-  - { key: Plus,           mods: Command,                    action: IncreaseFontSize      }
+  - { key: Equals,         mods: Command,                    action: IncreaseFontSize       }
+  - { key: Plus,           mods: Command,                    action: IncreaseFontSize       }
   #- { key: NumpadAdd,      mods: Command,                    action: IncreaseFontSize      }
   #- { key: Minus,          mods: Command,                    action: DecreaseFontSize      }
   #- { key: NumpadSubtract, mods: Command,                    action: DecreaseFontSize      }
-  - { key: V,              mods: Command|Shift,                    action: Paste                 }
-  - { key: C,              mods: Command|Shift,                    action: Copy                  }
+  - { key: V,              mods: Command|Shift,              action: Paste                  }
+  - { key: C,              mods: Command|Shift,              action: Copy                   }
   #- { key: C,              mods: Command, mode: Vi|~Search,  action: ClearSelection        }
   #- { key: H,              mods: Command,                    action: Hide                  }
   #- { key: H,              mods: Command|Alt,                action: HideOtherApplications }
